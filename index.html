@@ -36,6 +36,9 @@
                     <h1>NuCamp</h1>
                     <h2>a better way to camp</h2>
                 </div>
+                <div class="col col-md-4 col-xl-2 mt-4">
+                    <a class="btn btn-info btn-lg text-nowrap" href="#reserveForm">Reserve Campsite</a>
+                </div>
             </div>
         </div>
     </header>
@@ -78,8 +81,13 @@
                 <h2 class="text-sm-right">Featured Campsites</h2>
             </div>
             <div class="col">
-                <h3>React Lake Campground</h3>
-                <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                <div class="media">
+                    <div class="media-body align-self-center">
+                        <h3>React Lake Campground</h3>
+                        <p class="d-none d-sm-block">Nestled in the foothills of the Chrome Mountains, this campground on the shores of the pristine React Lake is a favorite for fly fishers.</p>
+                    </div>
+                    <img src="img/react-lake-thumb.jpg" alt="React-Lake-Campground" class="img-thumbnail d-flex ml-3"/>
+                </div>
             </div>
         </div>
 
@@ -93,6 +101,50 @@
                     <div class="media-body align-self-center">
                         <h3>Bootstrap Outfitters</h3>
                         <p class="d-none d-sm-block">Bootstrap Outfitters supplies you with gear you need at prices you can't beat.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formatting for card row -->
+        <div class="row row-content">
+            <div class="col col-sm-6 mx-auto">
+                <!-- Card of reserve form starts here -->
+                <div class="card">
+                    <!-- Card Header -->
+                    <h3 class="card-header bg-info text-white">Reserve a Campsite</h3>
+                    <!-- Card body -->
+                    <div class="card-body">
+                        <form id="reserveForm">
+                            <!-- Number of Campers form group-->
+                            <div class="row form-group">
+                                <label for="numCampers" class="col-12 col-sm-6 col-form-label">Number of Campers</label>
+                                <div class="col">
+                                    <select name="numCampers" id="numCampers" class="form-control">
+                                        <option value="select">Select...</option>
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                        <option value="4">4</option>
+                                        <option value="5">5</option>
+                                        <option value="6">6</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <!-- Date of camping form group-->
+                            <div class="row form-group">
+                                <label for="date" class="col-12 col-sm-6 col-form-label">Date</label>
+                                <div class="col col-sm-6">
+                                    <input class="form-control" type="date" name="date" id="date" placeholder="date">
+                                </div>
+                            </div>
+                            <!-- Submit button-->
+                            <div class="row">
+                                <div class="col">
+                                    <button type="submit" class="btn btn-primary">Search</button>
+                                </div>
+                            </div>
+                        </form>
                     </div>
                 </div>
             </div>
